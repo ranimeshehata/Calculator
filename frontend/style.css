@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(185, 163, 136);
+}
+
+.block{
+    height: 600px;
+    width:360px;
+    border:10px outset black;
+    border-radius: 10px;
+    font-family:monospace;
+    font-size: 30px;
+    display: grid;
+    margin: auto;
+    margin-top: 60px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(114, 62, 133);    
+}
+.buttons{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.result {
+    border: 15px groove lightgray;
+    width: 310px;
+    height: 60px;
+    text-align: right;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color:black;
+    padding:20px;
+    font-weight: bolder;
+    border-color:rgb(83, 83, 83);
+    border-width: 4px;
+  }
+.item{
+    border-radius:10%;
+    border: solid black;
+    height:60px;
+    width: 70px;
+    margin: 6px;
+    margin-left: 15px;
+    font-size: 33px;
+    font-weight: bolder;
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif;
+    &.item.clear{
+        background-color: rgb(243, 209, 255);
+        color:purple;
+        font-size: 35px;
+        width: 159px; 
+        border-radius: 10%;
+    }
+    &.item.operations{
+        background-color: rgb(243, 209, 255);
+        color:purple;
+    }
+    &.item.numbers{
+        background-color: #a5a5a5db;
+        color:black;
+    }
+    &.item.sign{
+        background-color: peru;
+        color:rgb(59, 4, 78);
+    }
+}
+.item.operations:hover, .item.clear:hover{
+    background-color:  purple;
+    color: rgb(243, 290, 255);
+}
+.item.sign:hover{
+    background-color:  rgb(243, 209, 255);
+    color: rgb(18, 1, 18);
+}
+.item.numbers:hover{
+    background-color:  rgb(237, 229, 240);
+    color:black;
+}

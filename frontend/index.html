@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="icon" type="image/jpg" href="calc.jpg"></link>
+</head>
+<body>
+    <div id = "app" class="block" >
+        <input type="text" id ="ans" class="result" v-model="displayValue" readonly />
+        <div class="buttons">
+            <button v-on:click = "appendOperator('%')" class="item operations">&percnt;</button> 
+            <button v-on:click = "clear" class="item clear">CE</button>
+            <button v-on:click = "deleteLastChar" class="item operations">&#x232b;</button>
+            <button v-on:click ="appendOperator('⁻¹')" class="item operations">x<sup>-<small>1</small></sup></button>
+            <button v-on:click ="appendOperator('²')" class="item operations">x<sup><small>2</small></sup></button>
+            <button v-on:click ="appendOperator('√')" class="item operations">&Sqrt;</button>
+            <button v-on:click = "appendOperator('÷')" class="item sign">&div;</button>
+            <button v-on:click = "appendNumber('7')" class="item numbers">7</button>
+            <button v-on:click = "appendNumber('8')" class="item numbers">8</button>
+            <button v-on:click = "appendNumber('9')" class="item numbers">9</button>
+            <button v-on:click = "appendOperator('*')" class="item sign">&times;</button>
+            <button v-on:click = "appendNumber('4')" class="item numbers">4</button>
+            <button v-on:click = "appendNumber('5')" class="item numbers">5</button>
+            <button v-on:click = "appendNumber('6')" class="item numbers">6</button>
+            <button v-on:click = "appendOperator('-')" class="item sign">&minus;</button>
+            <button v-on:click = "appendNumber('1')" class="item numbers">1</button>
+            <button v-on:click = "appendNumber('2')" class="item numbers">2</button>
+            <button v-on:click = "appendNumber('3')" class="item numbers">3</button>
+            <button v-on:click = "appendOperator('+')" class="item sign">&plus;</button>
+            <button v-on:click = "reverse" class="item operations">+/-</button>
+            <button v-on:click = "appendNumber('0')" class="item numbers">0</button>
+            <button v-on:click = "appendDecimal('.')" class="item numbers">.</button>
+            <button v-on:click = "calculate" class="item sign">&equals;</button>
+        </div>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
